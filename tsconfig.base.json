@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myawesomeorg/frontend-astro": ["apps/frontend-astro/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,27 @@
+{
+  "name": "frontend-astro",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/frontend-astro/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/frontend-astro",
+        "main": "apps/frontend-astro/src/index.ts",
+        "tsConfig": "apps/frontend-astro/tsconfig.lib.json",
+        "assets": ["apps/frontend-astro/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs frontend-astro {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}
