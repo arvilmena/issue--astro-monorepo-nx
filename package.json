@@ -5,6 +5,8 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.1.1",
     "axios": "^1.0.0",
     "tslib": "^2.3.0"
   },
